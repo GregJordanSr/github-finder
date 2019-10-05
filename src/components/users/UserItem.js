@@ -1,12 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class UserItem extends Component {
+
+const UserItem = ({ user: { login, avatar_url, html_url }}) => {
   
-
-  render() {
-      // de-structured state
-      const { login, avatar_url, html_url } = this.props.user;
-
     return (
       <div className="card text-center">
         <img 
@@ -15,7 +12,6 @@ class UserItem extends Component {
          className="round-img" 
          style={{width: '60px'}} 
          />
-
         <h3>{login}</h3>
 
         <div>
@@ -28,7 +24,11 @@ class UserItem extends Component {
         </div>
       </div>
     )
-  }
 }
+
+UserItem.propTypes = {
+    user: PropTypes.object.isRequired,
+    
+};
 
 export default UserItem
