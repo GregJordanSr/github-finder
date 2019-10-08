@@ -14,20 +14,24 @@ class App extends Component{
     loading: false
   }
 
- async componentDidMount() {
+//  async componentDidMount() {
    
-   this.setState({ loading: true });
+//    this.setState({ loading: true });
+//     const res = await axios
+//       .get(`https://api.github.com/users?client_id=${clientId}&client_secret=${secret}`);
+
+//       this.setState({ users: res.data, loading: false })
+//   };
+
+  // Search Github users
+  searchUsers = async text => {
+    this.setState({ loading: true })
     const res = await axios
-      .get(`https://api.github.com/users?client_id=${clientId}&client_secret=${secret}`);
-
-      this.setState({ users: res.data, loading: false })
+      .get(`https://api.github.com/search/users?q=${text}&client_id=${clientId}&client_secret=${secret}`);
+      
+      this.setState({ users: res.data.items, loading: false })
   };
-
-  searchUsers = text => {
-    console.log(text)
-  }
   
-
   render () {
     return (
     <div className="App">
