@@ -15,8 +15,6 @@ const Users = ({ users, loading }) => {
       </div>
     )
   } 
-    
-  
 }
 Users.propTypes = {
   users: PropTypes.array.isRequired,
