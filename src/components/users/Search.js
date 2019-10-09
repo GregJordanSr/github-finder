@@ -6,7 +6,7 @@ class Search extends Component {
         text: '',
     };
 
-    // Checking for the proper proptypes for the searchUsers
+    // Checking for the proper propTypes for the searchUsers
     static propTypes = {
       searchUsers: PropTypes.func.isRequired,
       clearUsers: PropTypes.func.isRequired,
@@ -22,6 +22,8 @@ class Search extends Component {
     };
        
   render() {
+    const { showClear, clearUsers } = this.props;
+
     return (
       <div>
         <form onSubmit={this.onSubmit} className="form">
@@ -39,10 +41,10 @@ class Search extends Component {
             />
         </form>
         
-        {this.props.showClear && (
+        {showClear && (
           <button 
           className="btn btn-light btn-block" 
-          onClick={this.props.clearUsers}
+          onClick={clearUsers}
         >
           Clear
         </button>
