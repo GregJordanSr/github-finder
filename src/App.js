@@ -14,9 +14,7 @@ class App extends Component{
     users: [],
     loading: false,
     alert: null
-
   }
-
 
   // Search Github users
   searchUsers = async text => {
@@ -40,6 +38,7 @@ class App extends Component{
   render () {
     const { users, loading, alert} = this.state;
     const { searchUsers, clearUsers, setAlert,  } = this;
+    
     return (
     <div className="App">
       <Navbar />
@@ -55,7 +54,6 @@ class App extends Component{
           loading={loading} 
           users={users} 
         />
-
       </div>
     </div>
   );
