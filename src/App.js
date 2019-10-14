@@ -5,6 +5,7 @@ import Users from './components/users/Users';
 import Search from './components/users/Search';
 import Alert from './components/layout/Alert';
 import About from './components/pages/About';
+import Contact from './components/pages/Contact';
 import axios from 'axios';
 import './App.css';
 
@@ -60,6 +61,7 @@ class App extends Component{
               </>
             )}/>
             <Route exact path='/about' component={About} />
+            <Route exact path='/contact' component={Contact} />  
           </Switch>
         </div>
       </div>
