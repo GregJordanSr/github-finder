@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
-
 const Navbar = ({ icon, title}) => {
-    
-
     return (
         <nav className="navbar bg-success">
             <h1>
@@ -25,7 +22,6 @@ const Navbar = ({ icon, title}) => {
             </ul>
         </nav>
     )
-
 }
 
 Navbar.defaultProps = {

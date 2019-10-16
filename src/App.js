@@ -49,6 +49,8 @@ class App extends Component{
         <div className="container">
           <Alert alert={alert} />
           <Switch>
+
+            {/* Using BrowserRouter from react-router-dom*/}
             <Route exact path='/' render={props => (
               <> 
                 <Search 
